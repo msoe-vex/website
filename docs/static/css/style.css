@@ -1,5 +1,50 @@
+/* CSS Variables are placed below */
+:root {
+    /* Example variable definition */
+    /* --bg-color: white;          */
+}
+
+/* Custom Classes - Additional Implementations to Bootstrap */
+@media (min-width:1366px) {
+    .d-1366-block {
+        display:block!important;
+    }
+
+    .d-1366-none {
+        display:none!important;
+    }
+}
+
+@media (min-width:1366px) {
+    .d-1366-block {
+        display:block!important;
+    }
+
+    .d-1366-none {
+        display:none!important;
+    }
+}
+
+@media (min-width:1920px) {
+    .d-1920-block {
+        display: block!important;
+    }
+
+    .d-1920-none {
+        display: none!important;
+    }
+}
+
+
+/* Specific Styles */
 .nav-item {
     float:left;
     width:20%;
     text-align:center;
+}
+
+#homePageCarousel {
+    width:1080px;
+    height:400px;
+    margin: 0 auto;
 }
