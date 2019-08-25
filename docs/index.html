@@ -11,6 +11,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            alert("We apologize for the mess! Our team website is being vigilantly updated by our great team of Web Developers! Please check back often " +
+                "for the newest updates!")
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,23 +68,23 @@
         </div>
     </nav>
     <!-- Extra Small Body Container - Breakpoint: 0px >= width > 576px -->
-    <div id="dynamicXSmallBodyContainer" class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-1366-none d-1920-none" style="background-color:black; height:20px;">
+    <div id="dynamicXSmallBodyContainer" class="d-xs-block d-sm-none d-md-none d-lg-none d-xl-none d-1366-none d-1920-none" style="width:100%;">
 
     </div>
     <!-- Small Body Container - Breakpoint: 576px >= width > 768px -->
-    <div id="dynamicSmallBodyContainer" class="d-xs-none d-sm-block d-md-none d-lg-none d-xl-none d-1366-none d-1920-none" style="background-color:yellow; height:20px;">
+    <div id="dynamicSmallBodyContainer" class="d-xs-none d-sm-block d-md-none d-lg-none d-xl-none d-1366-none d-1920-none" style="width:576px;">
 
     </div>
     <!-- Medium Body Container - Breakpoint: 768px >= width > 992px -->
-    <div id="dynamicsMediumBodyContainer" class="d-xs-none d-sm-none d-md-block d-lg-none d-xl-none d-1366-none d-1920-none" style="background-color:orange; height:20px;">
+    <div id="dynamicsMediumBodyContainer" class="d-xs-none d-sm-none d-md-block d-lg-none d-xl-none d-1366-none d-1920-none" style="width:768px;">
 
     </div>
     <!-- Large Body Container - Breakpoint: 992px >= width > 1200px -->
-    <div id="dynamicLargeBodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-block d-xl-none d-1366-none d-1920-none" style="background-color:green; height:20px;">
+    <div id="dynamicLargeBodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-block d-xl-none d-1366-none d-1920-none" style="width:992px;">
 
     </div>
     <!-- Extra Large Body Container - Breakpoint: 1200px >= width > 1366px -->
-    <div id="dynamicXLargeBodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-block d-1366-none d-1920-none mx-auto" style="width:1200px; height:20px;">
+    <div id="dynamicXLargeBodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-block d-1366-none d-1920-none mx-auto" style="width:1200px;">
         <div id="homePageCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#homePageCarousel" data-slide-to="0" class="active"></li>
@@ -88,17 +94,17 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="about.html">
-                        <img src="static/img/slide01.jpg" class="d-block w-100" alt="About Slide">
+                        <img src="static/img/slide01-xlarge.png" class="d-block w-100" alt="About Slide">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="sponsorship.html">
-                        <img src="static/img/slide02.jpg" class="d-block w-100" alt="Sponsorship Slide">
+                        <img src="static/img/slide02-xlarge.png" class="d-block w-100" alt="Sponsorship Slide">
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a href="projects.html">
-                        <img src="static/img/slide03.jpg" class="d-block w-100" alt="Projects Slide">
+                        <img src="static/img/slide03-xlarge.png" class="d-block w-100" alt="Projects Slide">
                     </a>
                 </div>
             </div>
@@ -111,13 +117,67 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        <div class="bkg-white w-100" style="height:600px;">
+            <div class="home-page-content-container pt-5 pb-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card text-center w-75 mx-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">Learn About Us</h5>
+                                    <p class="card-text">Our team was founded for the 2019-2020 VEX Robotics Season.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="about.html" class="btn btn-primary">About Us ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card text-center w-75 mx-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">View Our Projects</h5>
+                                    <p class="card-text">We are constantly working to develop projects that reflect tools and practices used all over industry.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="projects.html" class="btn btn-primary">Our Projects ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card text-center w-75 mx-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sponsor Us</h5>
+                                    <p class="card-text">Our team would not be here if it wasn't for great donors like you in our community.</p>
+                                </div>
+                                <div class="card-footer">
+                                    <a href="sponsorship.html" class="btn btn-primary">Sponsor Us ></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="homePageImgBackground" class="home-page-content-container"> <!-- Possible panning image background -->
+                <div id="transparentFocusContainer"></div>
+                <div id="transparentFocusText">
+                    <h2 class="w-100 text-left" style="opacity:1;"><span class="quantity">20</span> Members</h2>
+                    <h2 class="w-100 text-center"><span class="quantity">2</span> Robots</h2>
+                    <h2 class="w-100 text-right"><span class="quantity">1</span> Program</h2>
+                    <p><span class="font-italic font-weight-bold">Raider Robotics</span> was founded in Fall of 2019, with an aim to not only compete in the VEX Robotics Competition, but also to serve
+                    as a public resource for STEM Education in the Greater Milwaukee Area, along with providing educational resources for anyone
+                    to use.</p>
+                </div>
+            </div>
+            <div class="home-page-content-container bkg-white" style="height:1000px;">
+            </div>
+        </div>
     </div>
     <!-- Wide Body Container - Breakpoint: 1366px >= width > 1920px -->
-    <div id="dynamic1366BodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-none d-1366-block d-1920-none" style="background-color:purple; height:20px;">
+    <div id="dynamic1366BodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-none d-1366-block d-1920-none" style="width:1366px;">
 
     </div>
     <!-- Extra Wide Body Container - Breakpoint: 1920px >= width -->
-    <div id="dynamic1920BodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-none d-1366-none d-1920-block" style="background-color:brown; height:20px;">
+    <div id="dynamic1920BodyContainer" class="d-xs-none d-sm-none d-md-none d-lg-none d-xl-none d-1366-none d-1920-block" style="width:1920px;">
 
     </div>
 </body>
