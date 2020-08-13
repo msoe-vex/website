@@ -1,4 +1,24 @@
+html,
+body {
+  background: black;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 .App {
+  height: inherit;
   text-align: center;
 }
 
+.container-div { 
+  Display: flex;
+  Height: 100vh;
+  Width: 100vw; 
+  Align-Items: center;
+  Justify-Content: center;
+}
