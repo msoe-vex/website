@@ -25,7 +25,7 @@ class Canvas extends Component {
         params={{
           particles: {
             number: {
-              value: 35,
+              value: 180,
               density: {
                 enable: true,
                 value_area: 800
@@ -75,7 +75,7 @@ class Canvas extends Component {
             },
             move: {
               enable: true,
-              speed: 1,
+              speed: 1.5,
               direction: "none",
               random: false,
               straight: false,
@@ -89,7 +89,7 @@ class Canvas extends Component {
             }
           },
           interactivity: {
-            detect_on: "canvas",
+            detect_on: "window",
             events: {
               onhover: {
                 enable: true,

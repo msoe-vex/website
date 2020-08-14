@@ -1,9 +1,8 @@
 html,
 body {
-  background: black;
   height: 100%;
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;

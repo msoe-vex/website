@@ -1,39 +1,21 @@
 import React from 'react';
-import './App.css';
-import Particles from './components/Particles';
-import Image from 'react-image-resizer';
+import './App.scss';
+import Landing from './components/Landing';
+import { StaticMenu } from './components/Menu';
+import Sections from './components/Sections';
+import { Footer } from './components/Builders';
+import { ScrollingProvider } from 'react-scroll-section';
 
 function App() {
   return (
     <div className="App">
-        <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%"
-        }}
-      >
-        <Particles />
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%"
-          }}
-        >
-        <div className="container-div">
-          <Image
-          img src={"./rrlogo.png"} alt="RR" className="center"
-          height={380}
-          width={320}/>
-        </div>
-          {/* render <Route> and <NavTabs /> here */}
-        </div>
-      </div>
+      <ScrollingProvider scrollBehavior="smooth">
+      <StaticMenu/>
+        <Landing>
+          <Sections/>
+          <Footer/>
+        </Landing>  
+      </ScrollingProvider>
     </div>
   );
 }
