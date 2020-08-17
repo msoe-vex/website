@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledSideNav, StyledNavItem } from './Builders';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUsers, faHome, faEnvelope, faHistory, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faUsers, faHome, faEnvelope, faHistory, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import { SectionLink } from 'react-scroll-section';
 import '../style/MobileMenu.scss';
 
@@ -41,7 +41,7 @@ const mobileMenu = props => {
     return (
     <div>
       <StyledSideNav className={attachedClasses.join(' ')}>
-        <div className="CloseNav" onClick={props.closed}><FontAwesomeIcon icon={faArrowLeft} /></div>
+        <div className="CloseNav" onClick={props.closed}><FontAwesomeIcon icon={faAngleLeft} /></div>
         <MobileMenuSection section="home"><FontAwesomeIcon icon={faHome} /></MobileMenuSection>
         <MobileMenuSection section="about"><FontAwesomeIcon icon={faUsers} /></MobileMenuSection>
         <MobileMenuSection section="history"><FontAwesomeIcon icon={faHistory} /></MobileMenuSection>

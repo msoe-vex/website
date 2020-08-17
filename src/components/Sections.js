@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Section } from 'react-scroll-section';
 import { SectionContainer } from './Builders';
+import ContactForm from './ContactForm';
 
 const Sections = () => (
   <Fragment>
@@ -20,9 +21,7 @@ const Sections = () => (
     </Section>
     <Section id="contact">
       <SectionContainer>
-        <span role="img" aria-label="letter">
-          💌
-        </span>
+        <ContactForm />
       </SectionContainer>
     </Section>
   </Fragment>

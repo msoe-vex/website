@@ -29,27 +29,28 @@ export const Item = styled.li`
 `;
 
 export const StyledSideNav = styled.div`
-  position: fixed;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
-  height: 100%;
-  width: 75px;     /* Set the width of the sidebar */
-  z-index: 2;      /* Stay on top of everything */
-  top: 0px;      /* Stay at the top */
-  background-color: #2f2f2f; /* Gray */
-  overflow-x: hidden;     /* Disable horizontal scroll */
+  position: fixed;    
+  height: 255px;
+  width: 60px;    
+  z-index: 2;     
+  top: 0px;      
+  background-color: #2f2f2f; 
+  overflow-x: hidden;
   padding-top: 10px;
+  opacity: .7;
+  border-bottom-right-radius: 20px;
 `;
 
 export const StyledNavItem = styled.div`
-height: 70px;
-width: 75px; /* width must be same size as NavBar to center */
-text-align: center; /* Aligns <a> inside of NavIcon div */
-margin-bottom: 0;   /* Puts space between NavItems */
+height: 45px;
+width: 60px;
+margin-bottom: 0;
 div {
-  font-size: 2.7em;
+  font-size: 2em;
   color: ${(props) => props.selected ? "white" : "gray"};
   :hover {
     opacity: 0.7;
-    text-decoration: none; /* Gets rid of underlining of icons */
+    text-decoration: none;
     border: none;
   }  
 }
@@ -66,7 +67,7 @@ export const SectionContainer = styled.section`
   text-align: center;
   scroll-behavior: smooth;
   position: 'relative';
-  background-color: gray;
+  background-color: #222222;
   background: ${(props) => props.theme[props.background || 'background']};
   & h1 {
     font-size: 2em;

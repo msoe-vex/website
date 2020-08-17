@@ -43,7 +43,7 @@ export const StaticMenu = props => {
 
   return (
   <div>
-    <DrawerToggle clicked={sideDrawerOpenHandler}/>
+    <DrawerToggle clicked={sideDrawerOpenHandler} visible={!sideDrawerIsVisible}/>
     <div className="Navbar">
       <Menu>
         <MenuSection section="home">HOME</MenuSection>
@@ -52,8 +52,10 @@ export const StaticMenu = props => {
         <MenuSection section="contact">CONTACT</MenuSection>
       </Menu>
     </div>
+    <div className="SideNav">
     <MobileMenu open={sideDrawerIsVisible}
             closed={sideDrawerClosedHandler}/>
+    </div>
   </div>
   );
 };

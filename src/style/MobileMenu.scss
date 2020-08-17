@@ -11,15 +11,15 @@
 }
 
 .CloseNav {
-    height: 70px;
-    width: 75px; /* width must be same size as NavBar to center */
-    text-align: center; /* Aligns <a> inside of NavIcon div */
-    margin-bottom: 0;   /* Puts space between NavItems */
-    font-size: 2.7em;
+    height: 60px;
+    width: 60px; 
+    text-align: center;
+    margin-bottom: 0; 
+    font-size: 2em;
     color: gray;
     :hover {
         opacity: 0.7;
-        text-decoration: none; /* Gets rid of underlining of icons */
+        text-decoration: none;
         border: none;
     }
 }

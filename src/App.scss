@@ -12,6 +12,9 @@ body {
 .App {
   height: inherit;
   text-align: center;
+  *:focus {
+    outline: none;
+  }
 }
 
 .container-div { 
@@ -21,3 +24,5 @@ body {
   Align-Items: center;
   Justify-Content: center;
 }
+
+@import "~bootstrap/scss/bootstrap";
