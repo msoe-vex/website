@@ -1,0 +1,14 @@
+.About {
+    color: white;
+    margin: 30px 450px 0px 450px;
+    p {
+        font-size: x-large;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 767px) {
+    .About {
+        margin: 0px 40px !important;
+    }
+  }

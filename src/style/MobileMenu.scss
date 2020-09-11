@@ -1,0 +1,25 @@
+.MobileNavbar {
+    transition: transform 0.3s ease-out;
+}
+
+.Open {
+    transform: translateX(0);
+}
+
+.Close {
+    transform: translateX(-100%);
+}
+
+.CloseNav {
+    height: 60px;
+    width: 60px; 
+    text-align: center;
+    margin-bottom: 0; 
+    font-size: 2em;
+    color: gray;
+    :hover {
+        opacity: 0.7;
+        text-decoration: none;
+        border: none;
+    }
+}
