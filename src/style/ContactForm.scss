@@ -1,6 +1,61 @@
 .ContactForm {
     width: 85%;
     background-color: gray;
-    padding: 10px 30px;
+    padding: 20px 0px;
     margin: auto;
+    border-radius: 15px;
+}
+
+.Form {    
+    padding: 0px 30px;
+}
+
+.Info {
+    padding: 0px 30px;
+}
+
+.SocialMediaIcon {
+    margin: 0px 15px;
+}
+
+.col-md-6 {
+    padding: 0px !important;
+}
+
+hr {
+    border-top: 2px solid #222222;
+}
+
+.form-group {
+    text-align: left;
+}
+
+@media (min-width: 767px) {
+    .Info {
+        border-right: 2px solid #222222;
+    }
+
+    .ContactForm {
+        max-width: 1110px;
+    }
+
+    .Split {
+        hr {
+            display: none !important;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .ContactForm {
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .Split {
+        hr {
+            border-top: 2px solid #222222;;
+            margin-top: 20px;
+        }
+    }
 }

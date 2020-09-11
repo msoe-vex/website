@@ -25,20 +25,20 @@ class Canvas extends Component {
         params={{
           particles: {
             number: {
-              value: 180,
+              value: 65,
               density: {
                 enable: true,
                 value_area: 800
               }
             },
             color: {
-              value: "#d30025"
+              value: "#ffffff"
             },
             shape: {
               type: "circle",
               stroke: {
                 width: 0,
-                color: "#d30025"
+                color: "#ffffff"
               },
             },
             opacity: {
@@ -56,7 +56,7 @@ class Canvas extends Component {
               random: true,
               anim: {
                 enable: true,
-                speed: 2,
+                speed: 1,
                 size_min: 0.1,
                 sync: false
               }

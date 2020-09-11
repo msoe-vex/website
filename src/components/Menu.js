@@ -48,7 +48,8 @@ export const StaticMenu = props => {
       <Menu>
         <MenuSection section="home">HOME</MenuSection>
         <MenuSection section="about">ABOUT</MenuSection>
-        <MenuSection section="history">HISTORY</MenuSection>
+        <MenuSection section="programs">PROGRAMS</MenuSection>
+        <MenuSection section="vexu">VEXU</MenuSection>
         <MenuSection section="contact">CONTACT</MenuSection>
       </Menu>
     </div>

@@ -1,0 +1,31 @@
+.VexU {
+    color: white;
+    p {
+        font-size: x-large;
+        font-style: italic;
+    }
+    margin-top: 100px;
+}
+
+.Team {
+    border-radius: 30px;
+    width: 358px;
+    height: 628px;
+}
+
+.TeamPic {
+    text-align: center;
+    padding: 20px;
+}
+
+.MainParagraph {
+    text-align: center;
+    padding: 20px;
+}
+
+    @media (max-width: 767px) { 
+        .TeamPic {
+        text-align: center;
+        padding: 0px !important;
+    }
+}

@@ -30,7 +30,7 @@ export const Item = styled.li`
 
 export const StyledSideNav = styled.div`
   position: fixed;    
-  height: 255px;
+  height: 305px;
   width: 60px;    
   z-index: 2;     
   top: 0px;      
@@ -54,6 +54,48 @@ div {
     border: none;
   }  
 }
+`;
+
+export const AboutSectionContainer = styled.section`
+  min-height: 32vh;
+  min-width: 320px;
+  display: flex;
+  margin: auto;
+  flex: 0 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  scroll-behavior: smooth;
+  position: 'relative';
+  background-color: #222222;
+  background: ${(props) => props.theme[props.background || 'background']};
+  & h1 {
+    font-size: 2em;
+  }
+  & span[role='img'] {
+    font-size: 4em;
+  }
+`;
+
+export const ReducedSectionContainer = styled.section`
+  min-height: 80vh;
+  min-width: 320px;
+  display: flex;
+  margin: auto;
+  flex: 0 1 auto;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  scroll-behavior: smooth;
+  position: 'relative';
+  background-color: #222222;
+  background: ${(props) => props.theme[props.background || 'background']};
+  & h1 {
+    font-size: 2em;
+  }
+  & span[role='img'] {
+    font-size: 4em;
+  }
 `;
 
 export const SectionContainer = styled.section`
