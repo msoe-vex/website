@@ -57,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "react-scripts": "^2.1.8"
   },
   "homepage": "http://www.msoevex.com"
