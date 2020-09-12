@@ -78,6 +78,8 @@ const ContactForm = props => {
     setNameEmailAlert(false);
   }
   
+  const mapURL = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places`
+
 	return (
     <ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
   	  <div className="ContactForm">
@@ -96,7 +98,7 @@ const ContactForm = props => {
               <hr/>
               <p>Raider Robotics is always looking for additional members to contribute to the success of the team. So if you are a MSOE student, we would be thrilled to have send us an email or come to any of our bi-weekly meetings because there are a plethora of ways for you to get involved and gain some of the industry-like experience that robotics has to offer.</p>
               <GoogleMap
-                googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                googleMapURL={mapURL}
                 loadingElement={<div style={{ height: `100%` }} />}
                 containerElement={<div style={{ height: `270px` }} />}
                 mapElement={<div style={{ height: `100%`, borderRadius: `15px` }} />}

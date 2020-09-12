@@ -52,38 +52,54 @@ const Landing = props => {
         >
               <div className="sponsors-div">
                 <Marquee velocity={25}>
-                  <Image src={msoeLogo} key={1}  
-                  height={120}
-                  width={100}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={iscLogo} key={2}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={milwaukeeLogo} key={3}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={fvcrLogo} key={4}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={moreLogo} key={5}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={rockwellLogo} key={6}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={lakeAreaLogo} key={7}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
-                  <Image src={polyMathLogo} key={8}  
-                  height={120}
-                  width={200}
-                  style={{marginLeft: "100px", zIndex: "1"}}/>
+                  <a href="https://www.msoe.edu/" target="_blank" rel="noopener noreferrer">
+                    <Image src={msoeLogo} key={1}  
+                    height={120}
+                    width={100}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://iscfax.com/" target="_blank" rel="noopener noreferrer">
+                    <Image src={iscLogo} key={2}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://www.milwaukeetool.com/" target="_blank" rel="noopener noreferrer">
+                    <Image src={milwaukeeLogo} key={3}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://fvcrinc.wixsite.com/fox-valley-robotics" target="_blank" rel="noopener noreferrer">
+                    <Image src={fvcrLogo} key={4}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://www.facebook.com/MORERobotics1714/" target="_blank" rel="noopener noreferrer">
+                    <Image src={moreLogo} key={5}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://www.rockwellautomation.com/" target="_blank" rel="noopener noreferrer">
+                    <Image src={rockwellLogo} key={6}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="https://lakeareains.com/" target="_blank" rel="noopener noreferrer">
+                    <Image src={lakeAreaLogo} key={7}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
+                  <a href="http://www.polymathinc.com/" target="_blank" rel="noopener noreferrer">
+                    <Image src={polyMathLogo} key={8}  
+                    height={120}
+                    width={200}
+                    style={{marginLeft: "50px", marginRight: "50px"}}/>
+                  </a>
               </Marquee>
             </div>
             <div className="container-div">
