@@ -1,6 +1,6 @@
 {
   "name": "vex-website",
-  "homepage": "https://msoe-vex.github.io/website/",
+  "homepage": "http://msoe-vex.github.io/website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
