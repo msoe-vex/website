@@ -109,7 +109,7 @@ const Landing = props => {
                 width={width > 767 ? 729 : 328}/>
               </div>
               <div className="arrow"></div>
-              <div className="grayArea"/>
+              <div className="thankYou"><h2>Thank You Sponsors!</h2></div>
             </div>
         {props.children}
         </div>

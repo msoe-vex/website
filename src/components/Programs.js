@@ -7,7 +7,7 @@ const programs = props => {
     return (
         <div className="Programs">
             <Row>
-                <Col md="4">
+                <Col md="12" lg="4">
                     <ScrollAnimation animateIn='fadeInLeft' animateOut="fadeOutLeft">
                         <div className="column">
                             <h1>Professional Development</h1>
@@ -22,7 +22,7 @@ const programs = props => {
                         </div>
                         </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="12" lg="4">
                         <ScrollAnimation animateIn='fadeInUp' animateOut="fadeOut">
                         <div className="column">
                             <h1>Community Outreach</h1>
@@ -37,7 +37,7 @@ const programs = props => {
                         </div>
                         </ScrollAnimation>
                     </Col>
-                    <Col md="4">
+                    <Col md="12" lg="4">
                         <ScrollAnimation animateIn='fadeInRight' animateOut="fadeOutRight">
                         <div className="column">
                             <h1>Competitive Robotics</h1>     

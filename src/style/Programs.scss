@@ -1,5 +1,10 @@
 .Programs {
     margin: 50px 100px 0px 100px;
+    max-width: 93.5%;
+}
+
+.col-md-12 {
+    padding: 0px !important;
 }
 
 .column {
@@ -7,7 +12,7 @@
     padding: 20px 0px;
     margin: auto;
     border-radius: 5px;
-    height: 70vh;
+    height: 72vh;
     margin: 30px 30px 0px 30px;
     hr {
         border-top: 2px solid #222222;
@@ -30,9 +35,9 @@ h5 {
     text-align: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1420px) {
     .Programs {
-        margin: 0px 10px 0px 10px;
+        margin: 0px 10px !important;
     }    
 
     .column {

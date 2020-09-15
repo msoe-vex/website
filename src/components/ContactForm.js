@@ -83,8 +83,8 @@ const ContactForm = props => {
 
 	return (
     <div>
+    <ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
       <div className="ContactForm">    
-        <ScrollAnimation animateIn='fadeIn' animateOut="fadeOut">
           {successAlert ? 
               <Alert variant="success" message="Message Sent." handleClose={() => setSuccessAlert(false)} /> : null}
           {errorAlert ? 
@@ -148,8 +148,8 @@ const ContactForm = props => {
                 </div>
               </Col>
             </Row>  
-          </ScrollAnimation>
         </div>
+        </ScrollAnimation>
       {/* <Footer /> */}
     </div>
 	);

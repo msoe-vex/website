@@ -7,9 +7,15 @@
     }
 }
 
+.col-md-10 {
+    padding: 0px !important;
+}
+
 
 @media (max-width: 767px) {
     .About {
-        margin: 20px 10px 0px 10px;
+        margin: 20px 0px 0px 0px;
+        padding: 0px 20px;
+        max-width: 97.5%;
     }    
 }
