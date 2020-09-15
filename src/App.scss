@@ -17,5 +17,10 @@ body {
   }
 }
 
+#particles canvas{
+  position: absolute;
+  width: 100vw !important;
+  background-color: black;
+}
 
 @import "~bootstrap/scss/bootstrap";

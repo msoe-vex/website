@@ -17,9 +17,8 @@ class Canvas extends Component {
     });
   };
   render() {
-    const { width, height } = this.state;
-    console.log(width, height);
     return (
+      <div id="particles">
       <Particles
         {...this.state}
         params={{
@@ -104,6 +103,7 @@ class Canvas extends Component {
           retina_detect: true
         }}
       />
+      </div>
     );
   }
 }

@@ -103,7 +103,7 @@ const ContactForm = props => {
                     googleMapURL={mapURL}
                     loadingElement={<div style={{ height: `100%` }} />}
                     containerElement={<div style={{ height: `270px` }} />}
-                    mapElement={<div style={{ height: `100%`, borderRadius: `15px` }} />}
+                    mapElement={<div style={{ height: `100%`, borderRadius: `5px` }} />}
                   />
                   {/* <div className="SocialMediaIcons">
                     <span className="SocialMediaIcon">

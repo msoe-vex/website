@@ -3,7 +3,6 @@ import './App.scss';
 import Landing from './components/Landing';
 import { StaticMenu } from './components/Menu';
 import Sections from './components/Sections';
-import { Footer } from './components/Builders';
 import { ScrollingProvider } from 'react-scroll-section';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <StaticMenu/>
         <Landing>
           <Sections/>
-          <Footer/>
         </Landing>  
       </ScrollingProvider>
     </div>

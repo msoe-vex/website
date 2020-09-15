@@ -46,27 +46,18 @@
 .sponsors-div {
   position: absolute;
   bottom: 0vh;
-  background-color: #222222;
+  background-color: #444444;
   padding-top: 15px;
   padding-bottom: 50px;
   width: 100%;
 }
 
-// .grayArea {
-//   z-index: .5;
-//   position: absolute;
-//   bottom: 0vh;
-//   background-color: #222222;
-//   height: 3rem;
-//   width: 100%;
-// }
-
 .container-div { 
-  Display: flex;
-  Height: 100vh;
-  Width: 100%; 
-  Align-Items: center;
-  Justify-Content: center;
+  display: flex;
+  height: 100vh;
+  width: 100%; 
+  align-Items: center;
+  justify-Content: center;
 }
 
 .logo-div {

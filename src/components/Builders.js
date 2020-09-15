@@ -126,6 +126,5 @@ export const Footer = styled.div`
   bottom: 0;
   justify-content: space-between;
   align-items: baseline;
-  width: calc(100% - 20px);
-  margin: 10px;
+  width: 100%;
 `;
