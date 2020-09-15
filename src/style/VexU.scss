@@ -8,7 +8,8 @@
 }
 
 .Team {
-    border-radius: 30px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 2px #222222;
     width: 358px;
     height: 628px;
 }
@@ -23,9 +24,12 @@
     padding: 20px;
 }
 
-    @media (max-width: 767px) { 
-        .TeamPic {
+@media (max-width: 767px) { 
+    .TeamPic {
         text-align: center;
         padding: 0px !important;
+    }
+    .VexU {
+        margin-top: 10px;
     }
 }

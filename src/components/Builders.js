@@ -67,7 +67,7 @@ export const AboutSectionContainer = styled.section`
   text-align: center;
   scroll-behavior: smooth;
   position: 'relative';
-  background-color: #222222;
+  background-color: #333333;
   background: ${(props) => props.theme[props.background || 'background']};
   & h1 {
     font-size: 2em;
@@ -88,7 +88,7 @@ export const ReducedSectionContainer = styled.section`
   text-align: center;
   scroll-behavior: smooth;
   position: 'relative';
-  background-color: #222222;
+  background-color: #333333;
   background: ${(props) => props.theme[props.background || 'background']};
   & h1 {
     font-size: 2em;
@@ -109,7 +109,7 @@ export const SectionContainer = styled.section`
   text-align: center;
   scroll-behavior: smooth;
   position: 'relative';
-  background-color: #222222;
+  background-color: #333333;
   background: ${(props) => props.theme[props.background || 'background']};
   & h1 {
     font-size: 2em;

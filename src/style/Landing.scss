@@ -45,25 +45,26 @@
 
 .sponsors-div {
   position: absolute;
-  top: 80vh;
-  background-color: #333333;
+  bottom: 0vh;
+  background-color: #222222;
   padding-top: 15px;
-  width: 100vw;
+  padding-bottom: 50px;
+  width: 100%;
 }
 
-.grayArea {
-  z-index: .5;
-  position: absolute;
-  bottom: 0vh;
-  background-color: #333333;
-  height: 3rem;
-  width: 100vw;
-}
+// .grayArea {
+//   z-index: .5;
+//   position: absolute;
+//   bottom: 0vh;
+//   background-color: #222222;
+//   height: 3rem;
+//   width: 100%;
+// }
 
 .container-div { 
   Display: flex;
   Height: 100vh;
-  Width: 100vw; 
+  Width: 100%; 
   Align-Items: center;
   Justify-Content: center;
 }
@@ -76,9 +77,5 @@
 @media (max-width: 767px) {
   .logo-div {
     padding-right: 0px !important;
-  }
-
-  .grayArea {
-    height: 1.5rem;
   }
 }
