@@ -4,8 +4,8 @@ import '../style/ContactForm.scss';
 import Alert from './Alert';
 import ReCAPTCHA from "react-google-recaptcha";
 import { Row, Col } from 'react-bootstrap';
-// import { SocialMediaIconsReact } from 'social-media-icons-react';
-import GoogleMap from './GoogleMap';
+import { SocialMediaIconsReact } from 'social-media-icons-react';
+// import GoogleMap from './GoogleMap';
 import ScrollAnimation from 'react-animate-on-scroll';
 // import Footer from './Footer';
 
@@ -19,10 +19,16 @@ const ContactForm = props => {
   const [nameEmailAlert, setNameEmailAlert] = useState(false);
   const [verified, setVerified] = useState(false);
   const [width, setWidth] = useState(0);
+  // const [mapKey, setMapKey] = useState("");
 
   useEffect(() => {
     updateWindowDimensions();
     window.addEventListener("resize", updateWindowDimensions);
+    // axios.get('/repos/msoe-vex/website/actions/secrets/public-key')
+    // .then(response => {
+    //   console.log(response);
+    //   // setMapKey(response);
+    // })
   }, []);
 
   const updateWindowDimensions = () => {
@@ -79,7 +85,7 @@ const ContactForm = props => {
     setNameEmailAlert(false);
   }
   
-  const mapURL = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}&v=3.exp&libraries=geometry,drawing,places`
+  // const mapURL = `https://maps.googleapis.com/maps/api/js?key=${mapKey}&v=3.exp&libraries=geometry,drawing,places`
 
 	return (
     <div>
@@ -96,26 +102,29 @@ const ContactForm = props => {
             <Row>
               <Col md={6}>
                 <div className="Info">
-                  <h1>Get in Touch!</h1>
+                  <h1>Contact Us</h1>
                   <hr/>
-                  <p>Raider Robotics is always looking for additional members to contribute to the success of the team. So if you are a MSOE student, we would be thrilled to have send us an email or come to any of our bi-weekly meetings because there are a plethora of ways for you to get involved and gain some of the industry-like experience that robotics has to offer.</p>
-                  <GoogleMap
+                  <h5>MSOE Robotics is always looking for sponsors and additional members to contribute to the success of the team.
+                     Whether you’re a MSOE student looking to join us, or a company who wants to learn more about becoming one of our sponsors,
+                      we would be thrilled to get in touch. You can contact us at <a href="mailto:msoerobotics@gmail.com">msoerobotics@gmail.com</a> or fill out this contact
+                       form with any questions or comments you have, and we’ll be in touch with you shortly!</h5>
+                  {/* <GoogleMap
                     googleMapURL={mapURL}
                     loadingElement={<div style={{ height: `100%` }} />}
-                    containerElement={<div style={{ height: `270px` }} />}
+                    containerElement={<div style={{ height: `280px` }} />}
                     mapElement={<div style={{ height: `100%`, borderRadius: `5px` }} />}
-                  />
-                  {/* <div className="SocialMediaIcons">
+                  /> */}
+                  <div className="SocialMediaIcons">
                     <span className="SocialMediaIcon">
                       <SocialMediaIconsReact borderColor="rgba(0,0,0,0.25)" borderWidth="3" borderStyle="solid" icon="instagram" iconColor="rgba(245,238,238,1)" backgroundColor="rgba(78,77,77,1)" iconSize="4" roundness="20%" url="https://www.instagram.com/raider.robotics/" size="55" />
                     </span>
                     <span className="SocialMediaIcon">
-                      <SocialMediaIconsReact borderColor="rgba(0,0,0,0.25)" borderWidth="3" borderStyle="solid" icon="twitter" iconColor="rgba(245,238,238,1)" backgroundColor="rgba(78,77,77,1)" iconSize="4" roundness="20%" url="/" size="55" />
+                      <SocialMediaIconsReact borderColor="rgba(0,0,0,0.25)" borderWidth="3" borderStyle="solid" icon="github" iconColor="rgba(245,238,238,1)" backgroundColor="rgba(78,77,77,1)" iconSize="4" roundness="20%" url="https://github.com/msoe-vex" size="55" />
                     </span>
                     <span className="SocialMediaIcon">
-                      <SocialMediaIconsReact borderColor="rgba(0,0,0,0.25)" borderWidth="3" borderStyle="solid" icon="github" iconColor="rgba(245,238,238,1)" backgroundColor="rgba(78,77,77,1)" iconSize="4" roundness="20%" url="/" size="55" />
+                      <SocialMediaIconsReact borderColor="rgba(0,0,0,0.25)" borderWidth="3" borderStyle="solid" icon="twitter" iconColor="rgba(245,238,238,1)" backgroundColor="rgba(78,77,77,1)" iconSize="4" roundness="20%" url="/" size="55" />
                     </span>
-                  </div> */}
+                  </div>
                   <div className="Split">
                     <hr />
                   </div>
@@ -138,7 +147,7 @@ const ContactForm = props => {
                     </div>
                     <div className="ReCAPTCHA">
                     <ReCAPTCHA
-                      sitekey="6Lf1wr8ZAAAAAKgAhdyyUWjwqvw2-WQAaV2EiGUS"
+                      sitekey="6Les-cwZAAAAAHbtoQcZlnCKgyyu0Pbv8wHU4OWv"
                       onChange={() => setVerified(true)}
                       size={width > 767 ? "normal" : "compact"}
                     />
