@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "359298da82e6c648cf30",
-    "url": "/website/static/css/main.d9dc63f5.chunk.css"
+    "revision": "d5d9a48c9f5ed01a7d3b",
+    "url": "/website/static/css/main.db7c64c6.chunk.css"
   },
   {
-    "revision": "359298da82e6c648cf30",
-    "url": "/website/static/js/main.6edfcdd7.chunk.js"
+    "revision": "d5d9a48c9f5ed01a7d3b",
+    "url": "/website/static/js/main.c0884dc7.chunk.js"
   },
   {
     "revision": "d15da1c5dbbceb93f3a7",
     "url": "/website/static/js/runtime~main.de462641.js"
   },
   {
-    "revision": "880ff5bdef6fc9d47e7a",
-    "url": "/website/static/js/2.db7802bb.chunk.js"
+    "revision": "8644f13955b7afd64bd7",
+    "url": "/website/static/js/2.0d02fa18.chunk.js"
   },
   {
     "revision": "86cd770415b91a32e980984b56ed82b5",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/website/static/media/milwaukeeLogo.8b306136.png"
   },
   {
-    "revision": "213fc6128c642b40849262bed4a1f95a",
+    "revision": "a011ab59d19cb28e305e88e559945333",
     "url": "/website/index.html"
   }
 ];

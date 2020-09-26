@@ -2,6 +2,7 @@ import React from 'react';
 import '../style/About.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { Row, Col } from 'react-bootstrap';
+import { PowerBIEmbed } from 'powerbi-client-react';
 
 const about = props => {
     return (
