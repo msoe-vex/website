@@ -15,7 +15,7 @@
     "bootstrap": "^4.5.2",
     "emailjs-com": "^2.6.3",
     "lodash": "^4.17.20",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "particles.js": "^2.0.0",
     "powerbi-client": "^2.14.1",
     "powerbi-client-react": "^1.1.0",
