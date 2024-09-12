@@ -33,7 +33,6 @@
     "react-scroll-section": "^2.1.0",
     "react-tsparticles": "^1.17.7",
     "reactstrap": "^8.5.1",
-    "social-media-icons-react": "^1.0.10",
     "styled-components": "^5.2.0"
   },
   "scripts": {
