@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@keyframes sponsor-scroll {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(-100%, 0px);
+  }
+}
+
+body {
+  max-width: 100vx;
+  overflow-x: hidden;
+}
+
+.full-offset-left {
+  position: relative;
+}
+
+.sponsors {
+  animation-name: sponsor-scroll;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.unstretched {
+  width: 100%;
+  height: auto;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
