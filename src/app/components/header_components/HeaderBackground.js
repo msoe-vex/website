@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 const MIN_MOUSE_DIST = 65;
-const DOT_RADIUS = 1;
-const DOT_DIAMETER = DOT_RADIUS * 2;
+const MIN_DOT_RADIUS = 1;
+const MAX_DOT_RADIUS = 1;
 const LINE_DISTANCE = 75;
 const MIN_DOT_SPEED = 0.15;
 const MAX_DOT_SPEED = 0.45;
@@ -58,17 +58,19 @@ export default function HeaderBackground({id, dot_count, classes}) {
                     dot.y += (MIN_MOUSE_DIST - mouse_dist) * Math.sin(mouse_angle);
                 }
 
+                const dot_diameter = dot.rad * 2;
+
                 // wraps dots around the outside
-                if (dot.x < -DOT_DIAMETER) {
-                    dot.x = canvas.width + DOT_RADIUS;
-                } else if (dot.x > canvas.width + DOT_DIAMETER) {
-                    dot.x = -DOT_RADIUS;
+                if (dot.x < -dot_diameter) {
+                    dot.x = canvas.width + dot.rad;
+                } else if (dot.x > canvas.width + dot_diameter) {
+                    dot.x = -dot.rad;
                 }
 
-                if (dot.y < -DOT_DIAMETER) {
-                    dot.y = canvas.height + DOT_RADIUS;
-                } else if (dot.y > canvas.height + DOT_DIAMETER) {
-                    dot.y = -DOT_RADIUS;
+                if (dot.y < -dot_diameter) {
+                    dot.y = canvas.height + dot.rad;
+                } else if (dot.y > canvas.height + dot_diameter) {
+                    dot.y = -dot.rad;
                 }
             });
 
@@ -97,7 +99,7 @@ export default function HeaderBackground({id, dot_count, classes}) {
             dots.forEach((dot) => {
                 // draws the dot
                 ctx.beginPath();
-                ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2);
+                ctx.arc(dot.x, dot.y, dot.rad, 0, Math.PI * 2);
                 ctx.fillStyle = 'white';
                 ctx.fill();
                 ctx.closePath();
@@ -146,5 +148,6 @@ function rand_dot(width, height, min_v, max_v) {
         y: Math.random() * height,
         dx: v * Math.cos(angle),
         dy: v * Math.sin(angle),
+        rad: MIN_DOT_RADIUS + Math.random() * (MAX_DOT_RADIUS - MIN_DOT_RADIUS)
     }
 }
