@@ -16,7 +16,7 @@ export default function Header() {
             </div>
 
             <div className="w-full h-0">
-                <div className="w-[90%] sm:w-[50%] md:w-[40%] lg:w-[25%] mx-[auto] px-4 pb-2 bg-zinc-900 translate-y-[-50%] rounded-md border-2 border-zinc-400">
+                <div className="w-[90%] sm:w-[50%] md:w-[40%] lg:w-[25%] mx-[auto] px-4 py-2 bg-zinc-900 translate-y-[-50%] rounded-md border-2 border-zinc-400">
                     <h2 className="w-full text-center text-2xl"><strong>Thank You Sponsors!</strong></h2>
                 </div>
             </div>
