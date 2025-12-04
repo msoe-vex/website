@@ -9,7 +9,7 @@ export default function ContactUs() {
             <H3 title="Contact Us"/>
             <Hr/>
             <p>
-                MSOE Robotics is always looking for sponsors and additional members to contribute to the success of the team. Whether you’re a MSOE student looking to join us, or a company who wants to learn more about becoming one of our sponsors, we would be thrilled to get in touch. You can contact us at <em><strong>msoerobotics@gmail.com</strong></em> or fill out this contact form with any questions or comments you have, and we’ll be in touch with you shortly!
+                MSOE Robotics is always looking for sponsors and additional members to contribute to the success of the team. Whether you’re a MSOE student looking to join us, or a company who wants to learn more about becoming one of our sponsors, we would be thrilled to get in touch. You can contact us at <em><strong>msoerobotics@gmail.com</strong></em>, and we’ll be in touch with you shortly!
             </p>
             <Hr/>
             <div className="flex justify-center align-center space-x-4">
