@@ -1,16 +1,26 @@
-import FancyDiv from "../styled_components/FancyDiv";
+import Card from "../Card";
+import { Info } from "lucide-react";
 
 export default function About() {
     return (
-        <div id="about" className="my-8">
-            <h2 className="w-full text-center text-4xl"><strong>About MSOE Robotics</strong></h2>
-            <FancyDiv extra_classes="w-full lg:w-[80%] mx-[auto]">
-                <p>
-                    <em>
-                        MSOE Robotics is a student run collegiate robotics team with three main goals: community outreach through support of local FIRST robotics programs, professional development of students through connections with local businesses and experts in STEM industries, and competition in college level competitive robotics across multiple offered platforms.
-                    </em>
-                </p>
-            </FancyDiv>
-        </div>
+        <section id="about" className="py-24 scroll-mt-20">
+            <div className="max-w-4xl mx-auto px-4">
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-foreground tracking-tight">
+                        Our Mission
+                    </h2>
+                    <div className="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+                </div>
+                
+                <Card icon={Info}>
+                    <p className="text-center">
+                        MSOE Robotics is a student run collegiate robotics team with three main goals: 
+                        <span className="text-foreground font-medium"> community outreach</span> through support of local FIRST robotics programs, 
+                        <span className="text-foreground font-medium"> professional development</span> of students through connections with local businesses and experts in STEM industries, and 
+                        <span className="text-foreground font-medium"> competition</span> in college level competitive robotics across multiple offered platforms.
+                    </p>
+                </Card>
+            </div>
+        </section>
     );
 }

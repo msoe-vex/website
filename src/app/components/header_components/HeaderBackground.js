@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const MIN_MOUSE_DIST = 65;
 const DOT_RADIUS = 1;
@@ -23,11 +24,14 @@ export function set_mouse_position(e) {
 
 export default function HeaderBackground({id, classes}) {
     canvas_id = id;
+    const { theme, resolvedTheme } = useTheme();
+    const currentTheme = theme === 'system' ? resolvedTheme : theme;
 
     // a function to initialize the canvas drawing loop
     useEffect(() => {
         // creates canvas
         const canvas = document.getElementById(id);
+        if (!canvas) return;
         const ctx = canvas.getContext('2d');
         set_canvas_width(canvas);
 
@@ -39,6 +43,8 @@ export default function HeaderBackground({id, classes}) {
         for (let i = 0; i < dot_count; i++) {
             dots[i] = rand_dot(canvas.width, canvas.height, MIN_DOT_SPEED, MAX_DOT_SPEED);
         }
+
+        let animationFrameId;
 
         // update function
         const update = () => {
@@ -87,10 +93,17 @@ export default function HeaderBackground({id, classes}) {
 
                     if (dist < LINE_DISTANCE) {
                         // draws a line
+                        const opacityBase = (LINE_DISTANCE - dist) / LINE_DISTANCE;
                         ctx.beginPath();
                         ctx.moveTo(dot_1.x, dot_1.y);
                         ctx.lineTo(dot_2.x, dot_2.y);
-                        ctx.strokeStyle = `rgba(255,0,0,${(LINE_DISTANCE - dist) / LINE_DISTANCE})`;
+                        
+                        if (currentTheme === 'dark') {
+                            ctx.strokeStyle = `rgba(225, 29, 72, ${opacityBase * 0.8})`; // MSOE Red
+                        } else {
+                            ctx.strokeStyle = `rgba(100, 116, 139, ${opacityBase * 0.3})`; // Subtle Slate
+                        }
+                        
                         ctx.stroke();
                         ctx.closePath();
                     }
@@ -102,18 +115,28 @@ export default function HeaderBackground({id, classes}) {
                 // draws the dot
                 ctx.beginPath();
                 ctx.arc(dot.x, dot.y, DOT_RADIUS, 0, Math.PI * 2);
-                ctx.fillStyle = 'white';
+                
+                if (currentTheme === 'dark') {
+                    ctx.fillStyle = 'rgba(248, 250, 252, 0.8)'; // Slate 50
+                } else {
+                    ctx.fillStyle = 'rgba(15, 23, 42, 0.4)'; // Slate 900
+                }
+                
                 ctx.fill();
                 ctx.closePath();
             });
 
             // continues the update loop
-            requestAnimationFrame(update);
+            animationFrameId = requestAnimationFrame(update);
         };
 
         // starts the update loop
         update();
-    }, []);
+
+        return () => {
+            cancelAnimationFrame(animationFrameId);
+        };
+    }, [id, currentTheme]);
 
     return (
         <canvas
