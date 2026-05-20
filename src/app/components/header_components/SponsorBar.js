@@ -84,9 +84,23 @@ export default function SponsorBar() {
     const isDragging = useRef(false);
     const startX = useRef(0);
     const scrollLeftStart = useRef(0);
+    const hasMoved = useRef(false);
+    const dragThreshold = 5; // pixels
+
+    // Sync window mouseup to prevent getting stuck if mouse is released outside the element
+    useEffect(() => {
+        const handleWindowMouseUp = () => {
+            isDragging.current = false;
+        };
+        window.addEventListener("mouseup", handleWindowMouseUp);
+        return () => {
+            window.removeEventListener("mouseup", handleWindowMouseUp);
+        };
+    }, []);
 
     const handleMouseDown = (e) => {
         isDragging.current = true;
+        hasMoved.current = false;
         startX.current = e.pageX - scrollRef.current.offsetLeft;
         scrollLeftStart.current = targetScroll.current;
     };
@@ -99,8 +113,20 @@ export default function SponsorBar() {
         if (!isDragging.current) return;
         e.preventDefault();
         const x = e.pageX - scrollRef.current.offsetLeft;
-        const walk = (x - startX.current) * 2; // speed multiplier
+        const distance = x - startX.current;
+        if (Math.abs(distance) > dragThreshold) {
+            hasMoved.current = true;
+        }
+        const walk = distance * 2; // speed multiplier
         targetScroll.current = scrollLeftStart.current - walk;
+    };
+
+    const handleClickCapture = (e) => {
+        // If the user actually dragged, prevent navigation
+        if (hasMoved.current) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
     };
 
     return (
@@ -117,6 +143,8 @@ export default function SponsorBar() {
                 onMouseDown={handleMouseDown}
                 onMouseUp={handleMouseUp}
                 onMouseMove={handleMouseMove}
+                onDragStart={(e) => e.preventDefault()}
+                onClickCapture={handleClickCapture}
             >
                 <div className="flex min-w-max py-2">
                     {sponsors_data.map((s, i) => (

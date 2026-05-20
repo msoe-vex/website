@@ -1,5 +1,5 @@
 import Image from "next/image";
-import RAIDER_ROBOTICS from "../../assets/vexU/Raider_Robotics.png"
+import TEAM_PHOTO from "../../assets/images/team_photo_at_worlds.jpg"
 import Card from "../Card";
 export default function VexU() {
     return (
@@ -19,16 +19,18 @@ export default function VexU() {
                         </div>
                         <div className="relative min-h-[400px] bg-slate-900 overflow-hidden">
                             <Image 
-                                src={RAIDER_ROBOTICS}  
+                                src={TEAM_PHOTO}  
                                 fill
-                                className="object-contain p-8 transition-transform duration-500 hover:scale-105" 
-                                alt="Raider Robotics"
+                                className="object-cover transition-transform duration-500 hover:scale-105" 
+                                alt="Raider Robotics Team Photo"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-r from-card/20 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-card/20 to-transparent pointer-events-none"></div>
                         </div>
                     </div>
                 </Card>
             </div>
         </section>
     );
-}
+}
